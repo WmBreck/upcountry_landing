@@ -7,18 +7,19 @@
   <meta name="description" content="Upcountry Contractors LLC provides remodeling, carpentry, and home improvement services across the Upstate of South Carolina, including Greenville, Easley, Simpsonville, and surrounding areas." />
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-light: #1f2937;
-      --accent: #fbbf24;
-      --accent-soft: #fef3c7;
-      --text: #e5e7eb;
-      --text-muted: #9ca3af;
-      --card-bg: #111827;
-      --border: #374151;
+      --bg: #f5f1e7;          /* ecru-style page background */
+      --bg-light: #fdfaf3;
+      --accent: #2f6f3e;      /* deep green to match cube rulers */
+      --accent-soft: #e3f4e8;
+      --wood: #a76836;        /* wood tone to echo frame */
+      --text: #2b2925;
+      --text-muted: #6f6656;
+      --card-bg: #ffffff;
+      --border: #d4cbb0;
       --max-width: 1100px;
       --radius-lg: 18px;
       --radius-sm: 10px;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+      --shadow-soft: 0 14px 28px rgba(0, 0, 0, 0.18);
     }
 
     * {
@@ -28,7 +29,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827, #020617 52%);
+      background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
     }
@@ -61,15 +62,15 @@
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
       border: 2px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at 20% 0, #4b5563, #020617);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      background: #fdfaf3;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
       overflow: hidden;
     }
 
@@ -80,11 +81,17 @@
       display: block;
     }
 
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
     .brand-text-main {
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      color: #1f1c17;
     }
 
     .brand-text-sub {
@@ -92,11 +99,6 @@
       text-transform: uppercase;
       color: var(--text-muted);
       letter-spacing: 0.12em;
-    }
-
-    .header-text {
-      display: flex;
-      flex-direction: column;
     }
 
     .header-contact {
@@ -116,10 +118,10 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #0b1120, #020617);
+      background: var(--bg-light);
       border-radius: var(--radius-lg);
       padding: 24px 20px 22px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
+      border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
@@ -133,12 +135,12 @@
       gap: 6px;
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(15, 118, 110, 0.15);
-      border: 1px solid rgba(45, 212, 191, 0.35);
+      background: var(--accent-soft);
+      border: 1px solid rgba(47, 111, 62, 0.3);
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #a5f3fc;
+      color: #23492c;
       margin-bottom: 10px;
     }
 
@@ -146,6 +148,7 @@
       font-size: clamp(26px, 4vw, 34px);
       line-height: 1.1;
       margin: 0 0 10px;
+      color: #1f1c17;
     }
 
     .hero-title span {
@@ -172,9 +175,9 @@
       letter-spacing: 0.12em;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(183, 169, 135, 0.9);
+      color: #3d3a33;
+      background: #faf5ea;
     }
 
     .hero-cta-row {
@@ -201,9 +204,9 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #f97316);
-      color: #111827;
-      box-shadow: 0 14px 30px rgba(249, 115, 22, 0.35);
+      background: linear-gradient(135deg, var(--accent), var(--wood));
+      color: #fffdf7;
+      box-shadow: 0 10px 22px rgba(167, 104, 54, 0.35);
     }
 
     .btn-primary span.icon {
@@ -213,7 +216,7 @@
     .btn-ghost {
       background: transparent;
       color: var(--accent);
-      border: 1px solid rgba(249, 250, 251, 0.18);
+      border: 1px solid rgba(98, 117, 93, 0.6);
     }
 
     .hero-note {
@@ -222,15 +225,15 @@
     }
 
     .hero-note strong {
-      color: #e5e7eb;
+      color: #2c2923;
       font-weight: 600;
     }
 
     .hero-media {
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid var(--border);
       overflow: hidden;
-      background: radial-gradient(circle at top, #1e293b, #020617 60%);
+      background: #f9f4ea;
       display: flex;
       flex-direction: column;
     }
@@ -243,15 +246,15 @@
     .hero-image-inner {
       border-radius: 16px;
       overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: #020617;
+      border: 1px solid var(--border);
+      background: #e6dfd0;
     }
 
     .hero-image-inner img {
       display: block;
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: auto;            /* show full face */
+      object-fit: contain;     /* no cropping */
     }
 
     .hero-image-tag {
@@ -261,9 +264,9 @@
       padding: 4px 10px;
       border-radius: 999px;
       font-size: 11px;
-      background: rgba(15, 23, 42, 0.88);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #e5e7eb;
+      background: rgba(245, 241, 231, 0.92);
+      border: 1px solid var(--border);
+      color: #2c2923;
     }
 
     .hero-image-tag span {
@@ -277,14 +280,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid rgba(55, 65, 81, 0.8);
-      background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+      border-top: 1px solid var(--border);
+      background: #f3ecdd;
       font-size: 11px;
       color: var(--text-muted);
     }
 
     .hero-media-footer strong {
-      color: #e5e7eb;
+      color: #2c2923;
       font-weight: 600;
     }
 
@@ -298,9 +301,9 @@
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      border: 1px solid var(--border);
       padding: 16px 16px 14px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      box-shadow: var(--shadow-soft);
     }
 
     .card-header {
@@ -314,6 +317,7 @@
     .card-title {
       font-size: 16px;
       font-weight: 600;
+      color: #1f1c17;
     }
 
     .card-kicker {
@@ -333,13 +337,14 @@
     .service {
       padding: 10px;
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: radial-gradient(circle at top, rgba(30, 64, 175, 0.28), rgba(15, 23, 42, 0.98));
+      border: 1px solid #e1d7c0;
+      background: #fbf7ee;
     }
 
     .service h3 {
       font-size: 13px;
       margin: 0 0 4px;
+      color: #2c2923;
     }
 
     .service p {
@@ -354,12 +359,13 @@
       gap: 4px;
       padding: 2px 7px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.55);
+      border: 1px solid #d7ccb4;
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #e5e7eb;
+      color: #3d3a33;
       margin-bottom: 5px;
+      background: #f4ecdd;
     }
 
     .service-tag span {
@@ -404,8 +410,8 @@
     .gallery-item {
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      background: #020617;
+      border: 1px solid #d7ccb4;
+      background: #f7f0e4;
       position: relative;
       min-height: 90px;
     }
@@ -423,18 +429,18 @@
       bottom: 6px;
       padding: 2px 7px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.88);
-      color: #e5e7eb;
+      background: rgba(245, 241, 231, 0.95);
+      color: #2c2923;
       font-size: 10px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      border: 1px solid #d7ccb4;
     }
 
     .contact-bar {
       margin-top: 4px;
       padding: 11px 13px;
       border-radius: var(--radius-lg);
-      background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
-      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: #f4ecdd;
+      border: 1px solid var(--border);
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -443,7 +449,7 @@
     }
 
     .contact-bar strong {
-      color: #e5e7eb;
+      color: #2c2923;
     }
 
     .contact-links {
@@ -458,11 +464,12 @@
       text-decoration: none;
       padding: 5px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+      border: 1px solid #cdbf9f;
       color: var(--accent);
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      background: #fbf7ee;
     }
 
     .contact-links a span.icon {
@@ -470,7 +477,7 @@
     }
 
     .contact-links a:hover {
-      background: rgba(15, 23, 42, 0.9);
+      background: #f3ebdd;
     }
 
     footer {
@@ -514,9 +521,6 @@
       .services-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      .hero-image-inner img {
-        height: 210px;
-      }
     }
   </style>
 </head>
@@ -535,9 +539,9 @@
         </div>
         <div class="header-contact">
           Call/Text:
-          <a href="tel:YOUR-PHONE-NUMBER">YOUR-PHONE-NUMBER</a><br />
+          <a href="tel:+18646609913">(864) 660-9913</a><br />
           Email:
-          <a href="mailto:you@example.com">you@example.com</a>
+          <a href="mailto:upcountrycontractors@gmail.com">upcountrycontractors@gmail.com</a>
         </div>
       </header>
 
@@ -551,20 +555,20 @@
             Remodeling that respects your <span>home</span> and your <span>budget</span>.
           </h1>
           <p class="hero-subtitle">
-            Upcountry Contractors LLC helps homeowners across the Upstate transform tired spaces into warm, functional rooms you actually enjoy living in — without the contractor drama.
+            Upcountry Contractors LLC helps homeowners across the Upstate plan and complete realistic projects that make their spaces more livable, durable, and functional.
           </p>
           <div class="hero-pills">
             <div class="pill">Kitchens &amp; Bathrooms</div>
             <div class="pill">Interior &amp; Exterior</div>
             <div class="pill">Repairs &amp; Punch Lists</div>
-            <div class="pill">Rental &amp; Turnkey Updates</div>
+            <div class="pill">Rental &amp; Turnover Work</div>
           </div>
           <div class="hero-cta-row">
-            <a class="btn-primary" href="tel:YOUR-PHONE-NUMBER">
+            <a class="btn-primary" href="tel:+18646609913">
               <span class="icon">📞</span>
               Request a Free Walkthrough
             </a>
-            <a class="btn-ghost" href="mailto:you@example.com?subject=Upcountry%20Contractors%20Estimate">
+            <a class="btn-ghost" href="mailto:upcountrycontractors@gmail.com?subject=Upcountry%20Contractors%20Estimate">
               📩 Email Photos of Your Project
             </a>
           </div>
@@ -579,13 +583,13 @@
               <img src="images/garrett_smiling.jpeg" alt="Garrett, owner of Upcountry Contractors LLC" />
             </div>
             <div class="hero-image-tag">
-              <span>Owner-Operated</span> Local contractor you can talk to.
+              <span>Owner-Operated</span> Talk directly with the person doing the work.
             </div>
           </div>
           <div class="hero-media-footer">
             <div>
               <strong>Hands-on project management</strong><br />
-              You work directly with the person responsible for the quality.
+              Clear communication from first walkthrough to final cleanup.
             </div>
             <div>
               <strong>Free estimates</strong><br />
@@ -609,7 +613,7 @@
               </div>
               <h3>Kitchen remodels</h3>
               <p>
-                Cabinet updates, countertops, lighting, and layout improvements — from full gut to smart, budget-conscious refresh.
+                Cabinet updates, countertops, lighting, and layout improvements — from full gut jobs to smart, budget-conscious refreshes.
               </p>
             </div>
             <div class="service">
@@ -618,7 +622,7 @@
               </div>
               <h3>Bathroom upgrades</h3>
               <p>
-                Tile, showers, vanities, and accessibility tweaks to make the space safer and easier to live with every day.
+                Tile, showers, vanities, and accessibility tweaks to make everyday use safer and more comfortable.
               </p>
             </div>
             <div class="service">
@@ -674,26 +678,26 @@
         </article>
       </section>
 
-      <!-- GALLERY + SERVICE AREA -->
+      <!-- TYPES OF PROJECTS + SERVICE AREA -->
       <section class="card">
         <div class="card-header">
-          <h2 class="card-title">Recent projects &amp; service area</h2>
+          <h2 class="card-title">Types of projects &amp; service area</h2>
           <div class="card-kicker">Upstate South Carolina</div>
         </div>
         <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
-          A few examples of the kind of work we do. These can be swapped out with additional project photos as the gallery grows.
+          A few examples of the types of work we do.
         </p>
         <div class="gallery">
           <div class="gallery-item">
-            <img src="images/Kitchen1.jpg" alt="Upcountry Contractors kitchen remodel" />
-            <div class="gallery-label">Kitchen refresh</div>
+            <img src="images/Kitchen1.jpg" alt="Example of a kitchen remodel project type" />
+            <div class="gallery-label">Kitchen remodels</div>
           </div>
           <div class="gallery-item">
-            <img src="images/bathroom1.jpg" alt="Updated bathroom tile and fixtures" />
-            <div class="gallery-label">Bathroom upgrade</div>
+            <img src="images/bathroom1.jpg" alt="Example of a bathroom renovation project type" />
+            <div class="gallery-label">Bathroom updates</div>
           </div>
           <div class="gallery-item">
-            <img src="images/outdoor1.jpg" alt="Repaired deck and outdoor living area" />
+            <img src="images/outdoor1.jpg" alt="Example of an outdoor and deck project type" />
             <div class="gallery-label">Deck &amp; exterior</div>
           </div>
         </div>
@@ -703,11 +707,11 @@
             <strong>Service area:</strong> Greenville, Easley, Simpsonville, Greer, and surrounding Upstate SC communities.
           </div>
           <div class="contact-links">
-            <a href="tel: (864) 660-9913">
+            <a href="tel:+18646609913">
               <span class="icon">📞</span>
               Call/Text Now
             </a>
-            <a href="mailto:upcountrycontractors@gmail.com">
+            <a href="mailto:upcountrycontractors@gmail.com?subject=Upcountry%20Contractors%20Project%20Photos">
               <span class="icon">📷</span>
               Email Project Photos
             </a>
