@@ -252,9 +252,11 @@
 
     .hero-image-inner img {
       display: block;
-      width: 100%;
-      height: auto;            /* show full face */
-      object-fit: contain;     /* no cropping */
+      max-width: 100%;
+      height: auto;
+      max-height: 260px;      /* cap height so Garrett is not huge */
+      object-fit: contain;    /* keep full face visible */
+      margin: 0 auto;
     }
 
     .hero-image-tag {
